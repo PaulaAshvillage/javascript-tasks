@@ -68,6 +68,36 @@ const add = function (a, b) {
   return a + b;
 };
 //same wie:
-function add(a, b) {
+function adding(a, b) {
   return a + b;
 }
+
+//Condition if statement(comparison rule) followed by body
+const value = 8;
+if (value > 4) {
+  console.log("value is greater than 4");
+} else if (value === 1) {
+  console.log("value is 1");
+} else if (value === 5) {
+  console.log("value is 5");
+} else {
+  console.log("value is" + value);
+}
+
+//Switch Statement switch (comparison rule/expression) geprüft gegen jeden case, wenn ja break, rest:"default";
+const myName = "Paula";
+let result = "";
+switch (myName) {
+  case "Leonie":
+    result = "Servus Leonie";
+    break;
+  case "Freddie":
+    result = "Hallo Freddie";
+    break;
+  case "Paula":
+    result = "Hallo Paula";
+    break;
+  default:
+    result = "Hallo du";
+}
+console.log(result);
