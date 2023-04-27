@@ -101,3 +101,37 @@ switch (myName) {
     result = "Hallo du";
 }
 console.log(result);
+
+//Loops:Anweisungen die in einem kontinuierlichen Ablauf durchgeführt werden, Condition=Iteration
+//aim define condition:avoid infinite loops!
+//Loops can be nested-->multiple loops
+//for-loop--> for(condition)--> 3 Teile separiert durch Semikolon:
+// 1. Initialisierung;Condition;Increment/Decrement + body (auf die let Variable aus Initialisierung kann zugegriffen werden)
+for (
+  let i = 0;
+  i < 5;
+  i++ //Laufbedingung//
+) {
+  console.log("Rundenanzahl " + i); //Aktion für jeden Durchlauf
+}
+
+//While Loop: einen Baustein: Condition und Initialisierung und Increment/Decrement wird ausgelagert (man muss sich selber drum kümmern)
+//do-while: wird immer mindestens einmal ausgeführt
+
+//Statements Loops:
+//break & continue!
+function findFirstCharPosition(word, char) {
+  let result;
+  for (let i = 0; i < word.length; i++) {
+    const currentChar = word[i];
+    if (currentChar === char) {
+      result = i;
+      break; //Buchstabe wurde gefunden, nun stoppe die Schleife!
+    }
+
+    console.log(currentChar);
+  }
+  return result;
+}
+
+console.log(findFirstCharPosition("Paula", "u"));
