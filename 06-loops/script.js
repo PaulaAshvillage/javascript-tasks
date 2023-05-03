@@ -1,6 +1,6 @@
 //01) oddNumbers function
 function oddNum(numberOne, numberTwo) {
-  let allNumbers = ""; //als string definieren!
+  let allNumbers = ""; //Variable als string definieren!
   if (numberOne >= 0 && numberTwo >= 0) {
     for (let i = numberOne; i <= numberTwo; i++) {
       if (i % 2 != 0) {
@@ -36,16 +36,26 @@ function charCount(word, character) {
   if (character.length > 1) {
     return console.log("Darf nur aus einem Zeichen bestehen");
   } else {
+    word = word.toLowerCase(); //make ist case insensitive
+    character = character.toLowerCase();
     for (let i = 0; i < word.length; i++) {
-      const currentChar = word[i]; //Sichergehen,dass man durch das Wort iteriert
+      const currentChar = word[i]; //make sure to iterate through every character
       if (currentChar === character) {
-        CharCount = ++CharCount; //++ vor der Varaiblen damit zuerst erhöht und dann ausgegeben wird (Prefix increase)
+        CharCount++; //count if character is the given character
       }
     }
   }
-  return "Der Buchstabe kommt " + CharCount + " Mal im Wort vor";
+  return (
+    "Der Buchstabe " +
+    character +
+    " kommt " +
+    CharCount +
+    " Mal im Wort " +
+    word +
+    " vor"
+  );
 }
-console.log(charCount("Paula Acxhendurfva", "u"));
+console.log(charCount("Paula Acxhendurfva", "A"));
 
 console.log(charCount("hello", "l"));
 // result should be: 2

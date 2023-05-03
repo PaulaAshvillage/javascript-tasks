@@ -2,9 +2,9 @@
 function removeItem(arrayOfThings, Position) {
   const arrayOfThingsCopy = arrayOfThings.slice(); //copy of original Array given as parameter: to be changed if array consists of function or several arrays!
 
-  removedItem = arrayOfThingsCopy.splice(Position - 1, 1); //-1 tomodify to Zero based position
-  console.log("Dieses Item wurde entfern: " + removedItem);
-  return arrayOfThingsCopy; //neue Liste rausgeben
+  removedItem = arrayOfThingsCopy.splice(Position - 1, 1); //-1 to modify to Zero based position
+  console.log("Dieses Item wurde entfernt: " + removedItem);
+  return arrayOfThingsCopy; //returns new list
 }
 
 const animals = ["Dog", "Cat", "Lion"];
